@@ -58,6 +58,10 @@ flutter:
     - assets/images/email.png
     - assets/images/add.png
     - assets/images/shop.png
+    - assets/images/deals.png
+    - assets/images/chat.png
+    - assets/images/account.png
+    - assets/images/home.png
 
   #   - images/a_dot_ham.jpeg
 
