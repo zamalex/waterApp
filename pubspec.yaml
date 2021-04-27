@@ -62,6 +62,11 @@ flutter:
     - assets/images/chat.png
     - assets/images/account.png
     - assets/images/home.png
+    - assets/images/delete.png
+    - assets/images/shops.png
+    - assets/images/orders.png
+    - assets/images/swap.png
+    - assets/images/points.png
 
   #   - images/a_dot_ham.jpeg
 

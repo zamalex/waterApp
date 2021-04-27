@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 
 class CarosilSlider extends StatefulWidget {
-  List<String> sliderImages = [
+  final sliderImages = [
     'assets/images/woman-holding-glass.jpg',
     'assets/images/drink.jpeg'
   ];
@@ -105,5 +105,75 @@ class ChatBackgroundClipper extends CustomClipper<Path> {
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
     return true;
+  }
+}
+
+class HomeSlider extends StatefulWidget {
+  final sliderImages = [
+    'assets/images/woman-holding-glass.jpg',
+    'assets/images/drink.jpeg'
+  ];
+
+  @override
+  _HomeSliderState createState() => _HomeSliderState();
+}
+
+class _HomeSliderState extends State<HomeSlider> {
+  int _current = 0;
+
+  List getChild() {
+    return widget.sliderImages.map((i) {
+      return Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        child: Container(
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+          // margin: EdgeInsets.all(5.0),
+          child: ClipRRect(
+            child: Image.asset(
+              i,
+              fit: BoxFit.cover,
+              width: 1000.0,
+            ),
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+      );
+    }).toList();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      CarouselSlider(
+        options: CarouselOptions(
+          viewportFraction: .8,
+          autoPlay: true,
+          enlargeCenterPage: true,
+          aspectRatio: 2.0,
+          onPageChanged: (index, reason) {
+            setState(() {
+              _current = index;
+            });
+          },
+        ),
+        items: getChild(),
+      ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: widget.sliderImages.map((image) {
+          int index = widget.sliderImages.indexOf(image);
+          return Container(
+            width: 8.0,
+            height: 8.0,
+            margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: _current == index
+                    ? Colors.white
+                    : Color.fromRGBO(0, 0, 0, 0.4)),
+          );
+        }).toList(),
+      ),
+    ]);
   }
 }

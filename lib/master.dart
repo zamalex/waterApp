@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:water/account.dart';
+import 'package:water/cart.dart';
 import 'package:water/home.dart';
+import 'package:water/offers.dart';
 
 class MasterScreen extends StatefulWidget {
   @override
@@ -9,9 +12,9 @@ class MasterScreen extends StatefulWidget {
 class _MasterScreenState extends State<MasterScreen> {
   List<Widget> children = [
     HomeScreen(),
-    Container(),
-    Container(),
-    Container(),
+    CartScreen(),
+    OffersScreen(),
+    AccountScreen(),
     Container(),
   ];
   int _selectedIndex = 0;
@@ -21,6 +24,7 @@ class _MasterScreenState extends State<MasterScreen> {
     return Scaffold(
       body: children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 25,
         type: BottomNavigationBarType.fixed,
         showUnselectedLabels: false,
         showSelectedLabels: true,
@@ -31,7 +35,7 @@ class _MasterScreenState extends State<MasterScreen> {
             icon: Image.asset(
               'assets/images/home.png',
               color: textColor,
-              width: 32,
+              width: 25,
             ),
             label: 'الرئيسية',
             activeIcon: Center(),
@@ -40,25 +44,25 @@ class _MasterScreenState extends State<MasterScreen> {
             icon: Image.asset(
               'assets/images/shop.png',
               color: textColor,
-              width: 32,
+              width: 25,
             ),
-            label: 'الرئيسية',
+            label: 'مشترياتي',
             activeIcon: Center(),
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
               'assets/images/deals.png',
               color: textColor,
-              width: 32,
+              width: 25,
             ),
-            label: 'الرئيسية',
+            label: 'عروض',
             activeIcon: Center(),
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
               'assets/images/account.png',
               color: textColor,
-              width: 32,
+              width: 25,
             ),
             label: 'الرئيسية',
             activeIcon: Center(),
@@ -67,7 +71,7 @@ class _MasterScreenState extends State<MasterScreen> {
             icon: Image.asset(
               'assets/images/chat.png',
               color: textColor,
-              width: 32,
+              width: 25,
             ),
             label: 'الرئيسية',
             activeIcon: Center(),

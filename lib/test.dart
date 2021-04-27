@@ -10,6 +10,7 @@ class TestShape extends StatelessWidget {
       child: Stack(
         children: [
           Card(
+            elevation: 4,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             child: Container(
