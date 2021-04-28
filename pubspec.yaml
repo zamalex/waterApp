@@ -67,6 +67,18 @@ flutter:
     - assets/images/orders.png
     - assets/images/swap.png
     - assets/images/points.png
+    - assets/images/flag.png
+    - assets/images/heart.png
+    - assets/images/instagram.png
+    - assets/images/profile.png
+    - assets/images/twitter.png
+    - assets/images/wallet.png
+    - assets/images/whatsapp.png
+    - assets/images/world.png
+    - assets/images/location.png
+    - assets/images/twitter.png
+    - assets/images/instagram.png
+    - assets/images/whatsapp.png
 
   #   - images/a_dot_ham.jpeg
 

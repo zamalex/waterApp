@@ -147,22 +147,23 @@ class AccountScreen extends StatelessWidget {
                     AccountListTile(
                       title: 'مفضلاتي',
                       badge: true,
+                      image: 'assets/images/heart.png',
                     ),
                     Divider(),
                     AccountListTile(
-                      title: 'العناوين',
-                      badge: false,
-                    ),
+                        title: 'العناوين',
+                        badge: false,
+                        image: 'assets/images/location.png'),
                     Divider(),
                     AccountListTile(
-                      title: 'طرق الدفع',
-                      badge: false,
-                    ),
+                        title: 'طرق الدفع',
+                        badge: false,
+                        image: 'assets/images/wallet.png'),
                     Divider(),
                     AccountListTile(
-                      title: 'الملف الشخصي',
-                      badge: false,
-                    ),
+                        title: 'الملف الشخصي',
+                        badge: false,
+                        image: 'assets/images/profile.png'),
                   ],
                 ),
               ),
@@ -179,16 +180,16 @@ class AccountScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     AccountListTile(
-                      title: 'البلد',
-                      badge: false,
-                      text: 'المملكة العربية السعودية',
-                    ),
+                        title: 'البلد',
+                        badge: false,
+                        text: 'المملكة العربية السعودية',
+                        image: 'assets/images/flag.png'),
                     Divider(),
                     AccountListTile(
-                      title: 'اللغة',
-                      badge: false,
-                      text: 'English',
-                    ),
+                        title: 'اللغة',
+                        badge: false,
+                        text: 'English',
+                        image: 'assets/images/world.png'),
                   ],
                 ),
               ),
@@ -211,47 +212,32 @@ class AccountScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(
-                    backgroundColor: ablue,
-                    radius: 25,
-                    child: Image.asset(
-                      'assets/images/shops.png',
-                      width: 25,
-                    ),
+                  Image.asset(
+                    'assets/images/facebook.png',
+                    width: 30,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  CircleAvatar(
-                    backgroundColor: ablue,
-                    radius: 25,
-                    child: Image.asset(
-                      'assets/images/shops.png',
-                      width: 25,
-                    ),
+                  Image.asset(
+                    'assets/images/twitter.png',
+                    width: 30,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  CircleAvatar(
-                    backgroundColor: ablue,
-                    radius: 25,
-                    child: Image.asset(
-                      'assets/images/shops.png',
-                      width: 25,
-                    ),
+                  Image.asset(
+                    'assets/images/instagram.png',
+                    fit: BoxFit.contain,
+                    width: 30,
                   ),
                   SizedBox(
                     width: 5,
                   ),
-                  CircleAvatar(
-                    backgroundColor: ablue,
-                    radius: 25,
-                    child: Image.asset(
-                      'assets/images/shops.png',
-                      width: 25,
-                    ),
-                  )
+                  Image.asset(
+                    'assets/images/whatsapp.png',
+                    width: 30,
+                  ),
                 ],
               ),
               SizedBox(
@@ -299,12 +285,20 @@ class AccountListTile extends StatelessWidget {
   String title;
   String text;
   bool badge;
-  AccountListTile({@required this.title, @required this.badge, this.text});
+  String image;
+  AccountListTile(
+      {@required this.title,
+      @required this.badge,
+      this.text,
+      @required this.image});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(Icons.ac_unit, color: Colors.black),
+      leading: Image.asset(
+        image,
+        width: 25,
+      ),
       title: Text(
         title,
         style: TextStyle(color: blue, fontWeight: FontWeight.w500),

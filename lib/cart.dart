@@ -129,6 +129,10 @@ class CartScreen extends StatelessWidget {
                     itemCount: 5,
                   ),
                 ),
+                Container(
+                  color: Colors.green,
+                  height: 50,
+                )
               ],
             ),
           ),
