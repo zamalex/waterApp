@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water/orders.dart';
 
 import 'clip_shapes.dart';
 
@@ -71,21 +72,27 @@ class AccountScreen extends StatelessWidget {
                     width: 10,
                   ),
                   Expanded(
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: green,
-                          minRadius: MediaQuery.of(context).size.width * .1,
-                          child: Image.asset(
-                            'assets/images/orders.png',
-                            width: 32,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (_) => OrdersScreen()));
+                      },
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: green,
+                            minRadius: MediaQuery.of(context).size.width * .1,
+                            child: Image.asset(
+                              'assets/images/orders.png',
+                              width: 32,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text('طلباتي')
-                      ],
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text('طلباتي')
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(

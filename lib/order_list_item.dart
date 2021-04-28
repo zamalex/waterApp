@@ -38,8 +38,19 @@ class _OrderListItemState extends State<OrderListItem> {
                             expanded = !expanded;
                           });
                         },
-                        icon: Icon(Icons.arrow_downward_rounded),
-                        label: Text('التفاصيل'))
+                        label: expanded
+                            ? Icon(
+                                Icons.keyboard_arrow_down,
+                                color: Colors.black,
+                              )
+                            : Icon(
+                                Icons.chevron_right,
+                                color: Colors.black,
+                              ),
+                        icon: Text(
+                          'التفاصيل',
+                          style: TextStyle(color: Colors.black),
+                        ))
                   ],
                 ),
               ),
@@ -60,6 +71,7 @@ class _OrderListItemState extends State<OrderListItem> {
                     );
                   },
                   itemCount: 2,
+                  physics: NeverScrollableScrollPhysics(),
                 ),
               )
           ],
