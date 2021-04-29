@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:water/home.dart';
 import 'package:water/onboarding.dart';
+import 'package:water/order_details.dart';
 import 'package:water/slider.dart';
 
 void main() {
@@ -14,7 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(primarySwatch: Colors.blue, fontFamily: "Tajawal"),
+        theme: ThemeData(
+            primarySwatch: Colors.blue,
+            fontFamily: "Tajawal",
+            scaffoldBackgroundColor: Colors.grey.shade200),
         home: MyHomePage(),
         localizationsDelegates: [
           GlobalCupertinoLocalizations.delegate,

@@ -1,104 +1,210 @@
 import 'package:flutter/material.dart';
 import 'package:water/order_details_list_item.dart';
-import 'package:water/order_list_item.dart';
+import 'clip_shapes.dart';
 
 class OrderDetailsScreen extends StatelessWidget {
+  static const blue = Color.fromRGBO(13, 33, 66, 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          Text('طلب رقم 12345641'),
-          Text('تم الطلب يوم 12-12-2015'),
-          Divider(),
-          Container(
-            margin: EdgeInsets.all(10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TextButton.icon(
-                    onPressed: null,
-                    icon: Image.asset(
-                      'assets/images/location.png',
-                      width: 25,
-                    ),
-                    label: Text('عنوان التوصيل')),
-                Text('المنزل'),
-                Text(
-                    'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي')
-              ],
+      appBar: PreferredSize(
+          child: Container(
+            color: Colors.grey.shade200,
+            child: ClipPath(
+              clipper: AppBarClipper(),
+              child: Container(
+                height: 150,
+                width: double.infinity,
+                color: Colors.white,
+                child: Center(
+                  child: Text(
+                    'تفاصيل الطلب',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                ),
+              ),
             ),
           ),
-          Divider(),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.all(10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TextButton.icon(
-                    onPressed: null,
-                    icon: Image.asset(
-                      'assets/images/location.png',
-                      width: 25,
+          preferredSize: Size.fromHeight(122)),
+      body: Container(
+        color: Colors.grey.shade200,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Text(
+                'طلب رقم 12345641',
+                style: TextStyle(color: blue),
+              ),
+              Text(
+                'تم الطلب يوم 12-12-2015',
+                style: TextStyle(color: blue),
+              ),
+              Divider(),
+              Container(
+                margin: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextButton.icon(
+                        onPressed: null,
+                        icon: Image.asset(
+                          'assets/images/location.png',
+                          width: 25,
+                        ),
+                        label: Text(
+                          'عنوان التوصيل',
+                          style: TextStyle(color: blue),
+                        )),
+                    Text(
+                      'المنزل',
+                      style: TextStyle(color: blue),
                     ),
-                    label: Text('رقم الجوال')),
-                Text('+966 666 6666'),
-              ],
-            ),
-          ),
-          Card(child: OrderDetailsListItem()),
-          Card(
-            child: Container(
-              margin: EdgeInsets.all(10),
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('طريقة الدفع'),
-                  TextButton.icon(
-                      onPressed: null,
-                      icon: Image.asset(
-                        'assets/images/location.png',
-                        width: 25,
+                    Text(
+                      'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي',
+                      style: TextStyle(color: blue),
+                    )
+                  ],
+                ),
+              ),
+              Divider(),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                margin: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TextButton.icon(
+                        onPressed: null,
+                        icon: Image.asset(
+                          'assets/images/phone.png',
+                          width: 25,
+                        ),
+                        label: Text(
+                          'رقم الجوال',
+                          style: TextStyle(color: blue),
+                        )),
+                    Text(
+                      '+966 666 6666',
+                      style: TextStyle(color: blue),
+                    ),
+                  ],
+                ),
+              ),
+              Card(
+                child: OrderDetailsListItem(),
+                margin: EdgeInsets.all(10),
+              ),
+              Card(
+                margin: EdgeInsets.all(10),
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'طريقة الدفع',
+                        style: TextStyle(color: blue),
                       ),
-                      label: Text('الدفع كاش عند الاستلام')),
-                ],
+                      TextButton.icon(
+                          onPressed: null,
+                          icon: Image.asset(
+                            'assets/images/pay.png',
+                            width: 25,
+                          ),
+                          label: Text(
+                            'الدفع كاش عند الاستلام',
+                            style: TextStyle(color: blue),
+                          )),
+                    ],
+                  ),
+                ),
               ),
-            ),
+              Card(
+                margin: EdgeInsets.all(10),
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  width: MediaQuery.of(context).size.width,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'ملخص الطلب',
+                        style: TextStyle(color: blue),
+                      ),
+                      Divider(),
+                      Row(
+                        children: [
+                          Text(
+                            'مجموع الطلب',
+                            style: TextStyle(color: blue),
+                          ),
+                          Text(
+                            '36 ريال',
+                            style: TextStyle(color: blue),
+                          )
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'رسوم التوصيل',
+                            style: TextStyle(color: blue),
+                          ),
+                          Text(
+                            '36 ريال',
+                            style: TextStyle(color: blue),
+                          )
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'الخصم',
+                            style: TextStyle(color: blue),
+                          ),
+                          Text(
+                            '36 ريال',
+                            style: TextStyle(color: blue),
+                          )
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Divider(),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            'المجموع الكلي',
+                            style: TextStyle(color: blue),
+                          ),
+                          Text(
+                            '36 ريال',
+                            style: TextStyle(color: blue),
+                          )
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      ),
+                    ],
+                  ),
+                ),
+              )
+            ],
           ),
-          Card(
-            child: Container(
-              margin: EdgeInsets.all(10),
-              width: MediaQuery.of(context).size.width,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('ملخص الطلب'),
-                  Divider(),
-                  Row(
-                    children: [Text('مجموع الطلب'), Text('36 ريال')],
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  ),
-                  Row(
-                    children: [Text('رسوم التوصيل'), Text('36 ريال')],
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  ),
-                  Row(
-                    children: [Text('الخصم'), Text('36 ريال')],
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  ),
-                  Divider(),
-                  Row(
-                    children: [Text('المجموع الكلي'), Text('36 ريال')],
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  ),
-                ],
-              ),
-            ),
-          )
-        ],
+        ),
       ),
     );
   }

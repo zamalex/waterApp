@@ -17,7 +17,7 @@ class _OrderDetailsListItemState extends State<OrderDetailsListItem> {
           children: [
             ListTile(
               leading: Image.asset(
-                'assets/images/location.png',
+                'assets/images/add.png',
                 width: 25,
               ),
               title: Text('المنتجات'),

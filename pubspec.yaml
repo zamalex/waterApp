@@ -79,6 +79,10 @@ flutter:
     - assets/images/twitter.png
     - assets/images/instagram.png
     - assets/images/whatsapp.png
+    - assets/images/pay.png
+    - assets/images/phone.png
+    - assets/images/edit.png
+    - assets/images/remove.png
 
   #   - images/a_dot_ham.jpeg
 

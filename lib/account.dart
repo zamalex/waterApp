@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water/addresses.dart';
 import 'package:water/orders.dart';
 
 import 'clip_shapes.dart';
@@ -157,10 +158,16 @@ class AccountScreen extends StatelessWidget {
                       image: 'assets/images/heart.png',
                     ),
                     Divider(),
-                    AccountListTile(
-                        title: 'العناوين',
-                        badge: false,
-                        image: 'assets/images/location.png'),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (_) => AddressesScreen()));
+                      },
+                      child: AccountListTile(
+                          title: 'العناوين',
+                          badge: false,
+                          image: 'assets/images/location.png'),
+                    ),
                     Divider(),
                     AccountListTile(
                         title: 'طرق الدفع',
