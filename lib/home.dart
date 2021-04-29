@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             preferredSize: Size.fromHeight(122)),
-        body: SingleChildScrollView(
+        body: Container(
           child: Container(
             color: Colors.grey.shade200,
             child: Column(
@@ -76,13 +76,15 @@ class HomeScreen extends StatelessWidget {
                   ),
                   margin: EdgeInsets.symmetric(horizontal: 20),
                 ),
-                Container(
-                  color: Colors.grey.shade200,
-                  height: (MediaQuery.of(context).size.height) + 150,
-                  child: ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    itemBuilder: (ctx, i) => TestShape(),
-                    itemCount: 10,
+                Expanded(
+                  child: Container(
+                    color: Colors.grey.shade200,
+                    height: (MediaQuery.of(context).size.height),
+                    child: ListView.builder(
+                      // physics: NeverScrollableScrollPhysics(),
+                      itemBuilder: (ctx, i) => TestShape(),
+                      itemCount: 10,
+                    ),
                   ),
                 ),
               ],
