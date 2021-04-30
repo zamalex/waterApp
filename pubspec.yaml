@@ -27,6 +27,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   carousel_slider: ^3.0.0
+  flutter_chat_bubble: ^1.0.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -86,6 +87,8 @@ flutter:
     - assets/images/call.png
     - assets/images/support.png
     - assets/images/new.png
+    - assets/images/send.png
+    - assets/images/image.png
 
   #   - images/a_dot_ham.jpeg
 

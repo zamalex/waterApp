@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water/chat.dart';
 
 import 'clip_shapes.dart';
 
@@ -97,6 +98,10 @@ class SupportScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       ListTile(
+                        onTap: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => ChatScreen()));
+                        },
                         title: Container(
                           child: Text(
                             ' طلب الدعم لطلب رقم 982100',
