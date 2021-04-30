@@ -62,8 +62,13 @@ class _OrderListItemState extends State<OrderListItem> {
                 ),
               ),
               if (expanded) Divider(),
-              if (expanded)
-                Container(
+              AnimatedCrossFade(
+                duration: Duration(milliseconds: 250),
+                crossFadeState: !expanded
+                    ? CrossFadeState.showFirst
+                    : CrossFadeState.showSecond,
+                firstChild: Container(),
+                secondChild: Container(
                   height: 150,
                   child: ListView.builder(
                     itemBuilder: (c, i) {
@@ -79,7 +84,8 @@ class _OrderListItemState extends State<OrderListItem> {
                     itemCount: 2,
                     physics: NeverScrollableScrollPhysics(),
                   ),
-                )
+                ),
+              )
             ],
           )),
     );

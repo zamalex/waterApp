@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:water/account.dart';
 import 'package:water/cart.dart';
 import 'package:water/home.dart';
+import 'package:water/main_support.dart';
 import 'package:water/offers.dart';
 
 class MasterScreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _MasterScreenState extends State<MasterScreen> {
     CartScreen(),
     OffersScreen(),
     AccountScreen(),
-    Container(),
+    SupportScreen(),
   ];
   int _selectedIndex = 0;
   static const textColor = Color.fromRGBO(5, 102, 141, 1);

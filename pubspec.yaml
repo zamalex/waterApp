@@ -83,6 +83,9 @@ flutter:
     - assets/images/phone.png
     - assets/images/edit.png
     - assets/images/remove.png
+    - assets/images/call.png
+    - assets/images/support.png
+    - assets/images/new.png
 
   #   - images/a_dot_ham.jpeg
 

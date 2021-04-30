@@ -42,7 +42,10 @@ class AddressesScreen extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             child: ElevatedButton.icon(
               onPressed: () {},
-              icon: Icon(Icons.ac_unit),
+              icon: Image.asset(
+                'assets/images/new.png',
+                width: 25,
+              ),
               label: Container(
                 child: Text('إضافة عنوان جديد'),
                 margin: EdgeInsets.symmetric(vertical: 15),
