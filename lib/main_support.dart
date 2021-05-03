@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:water/chat.dart';
+import 'package:water/request_support.dart';
 
 import 'clip_shapes.dart';
 
@@ -42,7 +43,10 @@ class SupportScreen extends StatelessWidget {
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25)))),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (_) => RequestSupportScreen()));
+                        },
                         icon: CircleAvatar(
                           backgroundColor: Color.fromRGBO(114, 158, 64, 1),
                           child: Image.asset(
