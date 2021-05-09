@@ -1,4 +1,4 @@
-package com.example.water
+package com.badee.waterapp
 
 import io.flutter.embedding.android.FlutterActivity
 
