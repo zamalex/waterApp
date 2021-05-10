@@ -3,8 +3,8 @@ workflows:
       name: iOS Workflow
       environment:
         vars:
-          XCODE_WORKSPACE: "ios/water.xcworkspace" # <-- Put the name of your workspace here.
-          XCODE_SCHEME: "water" # <-- Put the name of your scheme here.
+          XCODE_WORKSPACE: "Runner.xcworkspace" # <-- Put the name of your workspace here.
+          XCODE_SCHEME: "Runner" # <-- Put the name of your scheme here.
           BUNDLE_ID: "com.badee.waterapp" # <-- Put your Bundle Id here.
           # https://docs.codemagic.io/code-signing-yaml/signing-ios/
           APP_STORE_CONNECT_ISSUER_ID: Encrypted(Z0FBQUFBQmdtQWR0eTA5SUJpNEdNeXZfQjZYNFh3ZEc1V1RyT2tnWHdxQ0dpQWZLaURIcThoc2pUMkxDeEVqX212bk1RUzdGUExoVGIyTmNVcG84Y0ZJZTJQMWVIbHFMajVWNGNvR1h0X1hNc1NxWE8wUkpYZlBENGF4YVNaNUxJMEw4S2ZaQ0UyZVg=)
