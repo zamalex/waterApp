@@ -51,7 +51,7 @@ workflows:
       publishing:
         app_store_connect:   # https://docs.codemagic.io/publishing-yaml/distribution              
           apple_id: mkatteb@badee.com.sa # <-- Put your Apple Id here    
-          password: Encrypted(Z0FBQUFBQmdtQWVPZWZ3WjlNanhtdjRHaE5idTlmOFNkUUFTSGxLclROamNHQW10NVZLRTVxQ2J0S2tsNkxzRWhxZS1idzd4MkxrT3B4ZDlpMEw0ckFpQnd4eXVhUkN4UXc9PQ==) # <-- Put your encrypted App-specific password here
+          password: Encrypted(Z0FBQUFBQmdtU2hSX1pLSG1pajBBZUZEdjEyR0xyaUV3WG1vcmxKcmlYMEhuRXhCMUYyQk9rQ1JPMTNfcDU1NTYwTWZFX1E4UnFRNlNHTVF2SXVQUXdIOV9KclE5WnBXbFgtOEg3a2EyWGxCT2VES3R4THBIajg9)
         email:
             recipients:
               - mustafaezzaldin@outlook.com
