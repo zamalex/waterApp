@@ -3,7 +3,7 @@ workflows:
       name: iOS Workflow
       environment:
         vars:
-          XCODE_WORKSPACE: "water.xcworkspace" # <-- Put the name of your workspace here.
+          XCODE_WORKSPACE: "ios/water.xcworkspace" # <-- Put the name of your workspace here.
           XCODE_SCHEME: "water" # <-- Put the name of your scheme here.
           BUNDLE_ID: "com.badee.waterapp" # <-- Put your Bundle Id here.
           # https://docs.codemagic.io/code-signing-yaml/signing-ios/
