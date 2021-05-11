@@ -73,10 +73,7 @@ class TestShape extends StatelessWidget {
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(23)))),
-                  onPressed: () {
-                    Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (_) => CartScreen()));
-                  },
+                  onPressed: () {},
                   label: CircleAvatar(
                     backgroundColor: Colors.white,
                     child: Image.asset(

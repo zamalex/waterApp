@@ -13,16 +13,22 @@ class AddressesScreen extends StatelessWidget {
             child: ClipPath(
               clipper: AppBarClipper(),
               child: Container(
-                height: 150,
-                width: double.infinity,
-                color: Colors.white,
-                child: Center(
-                  child: Text(
-                    'العناوين',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                  ),
-                ),
-              ),
+                  padding: EdgeInsets.only(top: 10),
+                  height: 150,
+                  width: double.infinity,
+                  color: Colors.white,
+                  child: AppBar(
+                    centerTitle: true,
+                    title: Text(
+                      'العناوين',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.black),
+                    ),
+                    backgroundColor: Colors.white,
+                    iconTheme: IconThemeData(color: Colors.black),
+                  )),
             ),
           ),
           preferredSize: Size.fromHeight(122)),

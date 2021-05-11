@@ -16,12 +16,23 @@ class OrdersScreen extends StatelessWidget {
                 height: 150,
                 width: double.infinity,
                 color: Colors.white,
-                child: Center(
-                  child: Text(
-                    'طلبات سابقة',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                  ),
-                ),
+                child: Container(
+                    padding: EdgeInsets.only(top: 10),
+                    height: 150,
+                    width: double.infinity,
+                    color: Colors.white,
+                    child: AppBar(
+                      centerTitle: true,
+                      title: Text(
+                        'طلبات سابقة',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.black),
+                      ),
+                      backgroundColor: Colors.white,
+                      iconTheme: IconThemeData(color: Colors.black),
+                    )),
               ),
             ),
           ),

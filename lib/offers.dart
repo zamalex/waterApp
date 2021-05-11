@@ -16,6 +16,12 @@ class OffersScreen extends StatelessWidget {
                   width: double.infinity,
                   color: Colors.white,
                   child: Center(
+                      child: AppBar(
+                    iconTheme: IconThemeData(
+                      color: Colors.black,
+                    ),
+                    backgroundColor: Colors.white,
+                  )
                       /*child: Image.asset(
                       "",
                       width: 70,
