@@ -17,12 +17,12 @@ class CartScreen extends StatelessWidget {
                   width: double.infinity,
                   color: Colors.white,
                   child: Center(
-                    child: Image.asset(
-                      "assets/images/shrink.png",
+                      /* child: Image.asset(
+                      "assets/images/image.png",
                       width: 70,
                       height: 70,
-                    ),
-                  ),
+                    ),***/
+                      ),
                 ),
               ),
             ),
@@ -49,7 +49,7 @@ class CartScreen extends StatelessWidget {
                                 color: Colors.white,
                                 child: ListTile(
                                   leading: Image.asset(
-                                    "assets/images/shrink.png",
+                                    "assets/images/image.png",
                                     width: 70,
                                     height: 70,
                                   ),

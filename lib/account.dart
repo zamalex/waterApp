@@ -22,12 +22,12 @@ class AccountScreen extends StatelessWidget {
                 width: double.infinity,
                 color: Colors.white,
                 child: Center(
-                  child: Image.asset(
-                    "assets/images/shrink.png",
+                    /*child: Image.asset(
+                    "",
                     width: 70,
                     height: 70,
-                  ),
-                ),
+                  ),*/
+                    ),
               ),
             ),
           ),

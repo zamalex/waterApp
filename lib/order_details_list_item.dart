@@ -68,7 +68,7 @@ class _OrderDetailsListItemState extends State<OrderDetailsListItem> {
                   itemBuilder: (c, i) {
                     return ListTile(
                         leading: Image.asset(
-                          'assets/images/shrink.png',
+                          'assets/images/image.png',
                           width: 50,
                         ),
                         title: Column(

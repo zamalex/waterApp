@@ -34,10 +34,10 @@ class TestShape extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.blue.shade300,
                               borderRadius: BorderRadius.circular(8)),
-                          child: Image.asset(
-                            "assets/images/shrink.png",
+                          /* child: Image.asset(
+                            "",
                             fit: BoxFit.contain,
-                          ),
+                          ),*/
                         ),
                       ),
                     ),
