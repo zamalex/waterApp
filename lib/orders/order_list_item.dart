@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:water/order_details.dart';
+import 'package:water/order/order_details.dart';
 
 class OrderListItem extends StatefulWidget {
   @override

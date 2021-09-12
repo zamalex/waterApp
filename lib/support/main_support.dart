@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:water/chat.dart';
-import 'package:water/request_support.dart';
+import 'package:water/support/chat.dart';
+import 'package:water/support/request_support.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class SupportScreen extends StatelessWidget {
   static const blue = Color.fromRGBO(13, 33, 66, 1);

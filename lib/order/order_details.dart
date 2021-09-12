@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:water/order_details_list_item.dart';
-import 'clip_shapes.dart';
+import 'package:water/order/order_details_list_item.dart';
+import '../clip_shapes.dart';
 
 class OrderDetailsScreen extends StatelessWidget {
   static const blue = Color.fromRGBO(13, 33, 66, 1);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:water/order_list_item.dart';
+import 'package:water/orders/order_list_item.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class OrdersScreen extends StatelessWidget {
   @override

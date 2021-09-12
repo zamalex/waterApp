@@ -1,7 +1,7 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class RequestSupportScreen extends StatelessWidget {
   static const green = Color.fromRGBO(114, 158, 64, 1);

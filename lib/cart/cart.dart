@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class CartScreen extends StatelessWidget {
   static const darkBlue = Color.fromRGBO(5, 102, 141, 1);

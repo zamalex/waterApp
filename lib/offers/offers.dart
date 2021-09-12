@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class OffersScreen extends StatelessWidget {
   @override

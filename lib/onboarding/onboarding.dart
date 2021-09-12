@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:water/master.dart';
 import 'package:water/slider.dart';
 
-import 'home.dart';
+import '../home/home.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   @override

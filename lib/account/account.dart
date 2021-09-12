@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:water/addresses.dart';
-import 'package:water/orders.dart';
+import 'package:water/address/addresses.dart';
+import 'package:water/orders/orders.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class AccountScreen extends StatelessWidget {
   static const green = Color.fromRGBO(114, 158, 64, 1);
@@ -120,7 +120,7 @@ class AccountScreen extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Expanded(
+               /*   Expanded(
                     child: Column(
                       children: [
                         CircleAvatar(
@@ -137,7 +137,7 @@ class AccountScreen extends StatelessWidget {
                         Text('متاجر')
                       ],
                     ),
-                  ),
+                  ),*/
                 ],
               ),
               SizedBox(
@@ -193,12 +193,12 @@ class AccountScreen extends StatelessWidget {
                 color: Colors.white,
                 child: Column(
                   children: [
-                    AccountListTile(
+                 /*   AccountListTile(
                         title: 'البلد',
                         badge: false,
                         text: 'المملكة العربية السعودية',
                         image: 'assets/images/flag.png'),
-                    Divider(),
+                    Divider(),*/
                     AccountListTile(
                         title: 'اللغة',
                         badge: false,

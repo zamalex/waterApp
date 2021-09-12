@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:water/slider.dart';
-import 'package:water/test.dart';
+import 'package:water/home/product_list_item.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -82,7 +82,7 @@ class HomeScreen extends StatelessWidget {
                     height: (MediaQuery.of(context).size.height),
                     child: ListView.builder(
                       // physics: NeverScrollableScrollPhysics(),
-                      itemBuilder: (ctx, i) => TestShape(),
+                      itemBuilder: (ctx, i) => ProductListItem(),
                       itemCount: 10,
                     ),
                   ),

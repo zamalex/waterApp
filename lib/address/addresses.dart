@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:water/addrss_item.dart';
+import 'package:water/address/addrss_item.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class AddressesScreen extends StatelessWidget {
   @override

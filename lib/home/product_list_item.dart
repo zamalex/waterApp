@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:water/cart.dart';
 
-class TestShape extends StatelessWidget {
+class ProductListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +26,7 @@ class TestShape extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     child: Container(
                       child: ClipPath(
-                        clipper: TestClipper(),
+                        clipper: ProductItemClipper(),
                         child: Container(
                           padding: EdgeInsets.all(20),
                           alignment: Alignment.centerLeft,
@@ -94,7 +93,7 @@ class TestShape extends StatelessWidget {
   }
 }
 
-class TestClipper extends CustomClipper<Path> {
+class ProductItemClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path_0 = Path();

@@ -3,7 +3,7 @@ import 'package:flutter_chat_bubble/bubble_type.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
 import 'package:flutter_chat_bubble/clippers/chat_bubble_clipper_1.dart';
 
-import 'clip_shapes.dart';
+import '../clip_shapes.dart';
 
 class ChatScreen extends StatelessWidget {
   static const blue = Color.fromRGBO(5, 102, 141, 1);

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:water/home.dart';
-import 'package:water/onboarding.dart';
-import 'package:water/order_details.dart';
+import 'package:water/home/home.dart';
+import 'package:water/onboarding/onboarding.dart';
+import 'package:water/order/order_details.dart';
 import 'package:water/slider.dart';
 
 void main() {

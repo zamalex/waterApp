@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:water/account.dart';
-import 'package:water/cart.dart';
-import 'package:water/home.dart';
-import 'package:water/main_support.dart';
-import 'package:water/offers.dart';
+import 'package:water/account/account.dart';
+import 'package:water/cart/cart.dart';
+import 'package:water/home/home.dart';
+import 'package:water/support/main_support.dart';
+import 'package:water/offers/offers.dart';
 
 class MasterScreen extends StatefulWidget {
   @override
@@ -15,8 +15,8 @@ class _MasterScreenState extends State<MasterScreen> {
     HomeScreen(),
     CartScreen(),
     OffersScreen(),
-    AccountScreen(),
     SupportScreen(),
+    AccountScreen(),
   ];
   int _selectedIndex = 0;
   static const textColor = Color.fromRGBO(5, 102, 141, 1);
@@ -61,22 +61,23 @@ class _MasterScreenState extends State<MasterScreen> {
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
-              'assets/images/account.png',
-              color: textColor,
-              width: 25,
-            ),
-            label: 'الرئيسية',
-            activeIcon: Center(),
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
               'assets/images/chat.png',
               color: textColor,
               width: 25,
             ),
-            label: 'الرئيسية',
+            label: 'الدعم',
             activeIcon: Center(),
           ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/images/account.png',
+              color: textColor,
+              width: 25,
+            ),
+            label: 'حسابي',
+            activeIcon: Center(),
+          ),
+
         ],
         currentIndex: _selectedIndex,
         onTap: (i) {
