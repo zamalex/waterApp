@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:water/master.dart';
+import 'package:water/bottomnavigation/master.dart';
 import 'package:water/slider.dart';
 
 import '../home/home.dart';
