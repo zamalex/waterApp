@@ -146,6 +146,7 @@ class _HomeSliderState extends State<HomeSlider> {
     return Column(children: [
       CarouselSlider(
         options: CarouselOptions(
+          height: 200,
           viewportFraction: .8,
           autoPlay: true,
           enlargeCenterPage: true,
