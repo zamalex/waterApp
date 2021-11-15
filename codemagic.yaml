@@ -1,1 +1,74 @@
 
+workflows:
+    ios-workflow:
+      name: iOS Workflow
+      environment:
+        vars:
+          XCODE_WORKSPACE: "ios/Runner.xcworkspace" # <-- Put the name of your workspace here.
+          XCODE_SCHEME: "Runner" # <-- Put the name of your scheme here.
+          BUNDLE_ID: "com.badee.waterapp" # <-- Put your Bundle Id here.
+          # https://docs.codemagic.io/code-signing-yaml/signing-ios/
+          APP_STORE_CONNECT_ISSUER_ID: Encrypted(Z0FBQUFBQmdtQWR0eTA5SUJpNEdNeXZfQjZYNFh3ZEc1V1RyT2tnWHdxQ0dpQWZLaURIcThoc2pUMkxDeEVqX212bk1RUzdGUExoVGIyTmNVcG84Y0ZJZTJQMWVIbHFMajVWNGNvR1h0X1hNc1NxWE8wUkpYZlBENGF4YVNaNUxJMEw4S2ZaQ0UyZVg=)
+          APP_STORE_CONNECT_KEY_IDENTIFIER: Encrypted(Z0FBQUFBQmdtQWVPZWZ3WjlNanhtdjRHaE5idTlmOFNkUUFTSGxLclROamNHQW10NVZLRTVxQ2J0S2tsNkxzRWhxZS1idzd4MkxrT3B4ZDlpMEw0ckFpQnd4eXVhUkN4UXc9PQ==)
+          APP_STORE_CONNECT_PRIVATE_KEY: Encrypted(Z0FBQUFBQmdtQWZBTVY5eUViQ2JTNjNrSnp0OFZKZldjOVVwM182VjVZR3owZVhIMDVDSC0yYm5fTm5xV2x4eXY1N3BrakVsczc0YkVyTF9ab1BpOTlTUjZCZEF6WkdSNTZETWhlUjIzeFd0Mkt4X3ZNaXFnRnBaWEdxSXluV2pJREVHR25HdHVBOS1FNDdhalVLZkNwdjgweDBHNkxVaTNNMFdFWjllakdYOEx6Qk1jSWVpdHBNQkdVT2xGNnN5UkdSOUlLVVNZcU5kR0JWQlRpTWZ2TzA2RTA2S1pmaEZ3MHR1cXJMRWstczk0SXZRQ0ZhM0FrS1FFaE5zRVFYN3M0UjVRVzhMYWdQbTFmX2JqRVl5ZkZKTDhVV25HYkpDLTNITXVfdmEtVlppbE9NUERDSXhFU1dGXzVTNlltWkV0UERVYVVaX3VjTHhXRWwwcnlRVlloOElwb1hWSGZndGhfcmpqOFFIMGlMcDVOYTRMeVZ2c3ZEWktjR2s4OXl0MGNBODFhTlpGUEZEVDJXQ2haYktCYTc5U2h3MTNTSmRQaEVrN3VSbmllZm1uc1ZILWdCZ19MST0=)
+          CERTIFICATE_PRIVATE_KEY: Encrypted(Z0FBQUFBQmdtQWZyUm1tTjhFbGh2My1pZnhlY05mdExUZzA5UElxMEpxckt1eHZ4bFVNWDAxN2k4aFZTV3djYWozdHhmQWYtYzJSSHlqWmxnVmwtV0hiYThnczF6aHRRWmlOajhXdC15REFVMHRqS3dTUktlTEpKUnR2blFBeTlRdHJJUGtDTmpOdDJpb3l2dk1VQ05fd0dyejktUzBYbHBDNXl2NFdLSk9ENUtSTWpFUDByOFJjRVlVTWJRQV95a2ZXLUFVSnVJSjhPRFA2S2U5ZHdySkp3dEU5Nll2WldXMGFMSzFLaXl3dy16cGpUNWh6MDBIUDFnY2w5QzQ0Z3IyUHFhOWxld0RnSmMxcHZYUVhXTklEUUxmamJNaXpQU05QUjk3SU1vaTdTLURfTUs4T0pBa1hUM1Q1VHd2cVJMS3VQanhQSF9DdkF0REtWcU5POHZxMXdNWllsTHp6SzZ0bzlUWVpYakZkeElXOXkyUl80eWhHYXRyWnlvYm5zU2dneWhqY2hadHFSTXRodFhrWXhjRFR0RElnT3JDcE9mVjl2VlJ5RlVZdS1KeTJfcmFEeS16b3RodGZ2RGs0N3BCODBuRVpfRnhZeHI4dDF5Uk9lanJUaWNYdDFTbTdRSWVhUGc3VkQyUExnbGQ5R2o3Y21OaU9hYzlnWVdzRlR1YThaeWE1SXVNemFRQjc5MTVva0djMVVzOXRvY3FMNTdMYmY3QTZuMXU1MmY3Y1R1WmRfemkteHhRMDRFRmEtYllDNHJUbnZzUzJNSFBkZjk4Y1hSTl9LT3JnemdSLWdzSXVvUlpSVDZVVGExSFlJclk3bFJQSzdES0xXX1hXSG5yNGtSR2JnSUZKZlZnZGMzdENQVlVtdU83UWJIVE0wV2tLempGN09VQTBWekJudThBZWlpZndKT2JQOFdxZkdLaVF2UUZvcTNBbmx0ckdnT1E2Y001RUNNT0ZXTzB5VUxibkNpX3FLVi0tN2FFTEJ5Y2VucmVjcmhDeUxjWFBQZUJ2ZnBMZWRnSFpnNE1NVUhseFhMSk5DSndqWHViWmlaSXdURGdzMmZUT2JVajhGOFlxOXJWRzU0LWNZNWdIZDBFRlZyMmdKVHJ0MW1oUFFabGVlV01EWFl4R0Nwakd2M2x0SjYwSFJNYk5ESkxjUUtKaUFnZDJ4dFQ5N1lPNlhzUkxWcDJmMmpLdEY0NVdqOFFSSk9aUjdxdlVXYzFEWU81aVpsTzJ4bFFHM2ZWZkVMcjlRbmpJWjMyemdQN3Jua2VvVmtoQnRtMHc4YS1FTWQxZng4LVhEMTRTbGFrTlBFVGFTdDhSbjRYQTFxX001cnltSjJrTTZXZVRfQldpM0JQcE5xMmloazhkR0VEOUxHMG8tVEJPYTVRM00wam1HRVNNTEZ0eDA5Z0pSTTVHamRCUm5CMy1ORm1NeVhrcDdsUDRnUU5wdGExUzRfSU14azZURjd1Mng4V3owUy05VkI0Z25GWUdlZE9qa2lFQ2UzRG9Qc3k2QmxSbXV5QlZkbXRRZlQzQkVIN0VwVEJCcmRQNFo2SEd1RU9UbGlTTldLcFJ4bjk3aE4xaUtacS1nSlpzcTVjb3ZzUGxfWDF1OEMzWnk3NHAyWGFtVFpiWE9xXzhYV3ZvekFhM0hSNURhek9UdEoyek8wM0FBLXloQ1NIbzBUY0h3dnJJb2FsOTJlR1htNGxqM1lhUnpEQ1FfNGNBX2dKbi02c1JlNXNzMXBYYUNNa2ZqTmpkeWdmcEt1cDA1NVAzSzI2NEFtRW5pZDd3bDRyOGxkbUV1Ym5jTjdjLTB2elhvaE5mQzVXQ2hhckJ0ZGRTVTJQSVNGWDU5WGV0ZDdnR2ZBQ2pHYzc5TnBQV0FLWGpWZUxJRXFzMGhobF9iX2szXzAxdnZGejRBS2dVM2xDbWxlZ0V5YWlLcDVlRzBkUEVTeWtUOUJpeGlVVVc3Q2liMGxDMlA0MU5SVHhaYVRtaEg0VUVpQjJDTzY1NGd5MlhDckxMNHpTOXBacEI5T3pjbFVraHlqNUtKaUV2bmhDbXhhV2U2YmsyX1ZxdWpiN1NFOC1nQWYxV21MVGxQNkNHbjFTS1d1c0tON19PREZqZFZYeVB3Y3hLWGRiTGYzMHJIaS1kSXp6T3hHc2doVUxsWDUtcXlXWEEtMTlLLXBpQk9iUTM5d3QxbzdUM05yZ1FwQ0JpWFZnYWRTUWpjSmdRamNRay1IcUI0cWF5czh6NG9IM192VHhIV09FbzVFUXg2Rk1CRjN5RkVYZ24xVHluVkpiODU0ZEpuR3RQX2hvS05QazROZ0hJejM1RnpaMm9tU1E3QW1za2lIVjlTZHQ3cUhsQkRSQW8tQlZoUUh6bXlCQlBmQWZzMWxQZnJ0UmRBS2piV25ZbV9RTEs1N3BmVWpYVkJDeENLNHB2cjd4bS0tbUdfZ3V1eWJ1WDVNVUpvUHYybHE5UDF4LW9fWE1TYXZ0aWhPLXFFTGNjSlZUaW0zMlR0Vm5BVWE5V1VfUTJKQ2QxX1pBUE9fTDRRNkRIdFUxeG1zTHYyLXNDTW84d2ZpTUxWTVk1RGE4SDFINkROUkMycHl6eFBGU2RfSjU1aFhPN1l1dVFkWWRQaG5CejNIM1EzLXZSYXE3cDNlZmhUdlFWM0hmbzh5YmVxT0JyQmJ2a3g4TENiakVfNWZ2NXFKX29vRExYTHZLM21tekxNcGYycFBIeU9pMTZyVUtES25PV2lmTnNSclNESzhiN2J2eXpzWGliSGZ2X2c4d0ZfZ2lTaVhOc0t1NUVxTE1PcUlHSTY5V3haOWQydFljZVM1VnhuUjhxNHFidkt2VHBUd2FuYTdNQU8xOTBnanFmMlBZdnVmd3ZrRUdMUk9hZk9Nc0ZqbnVjZDZaU3pCTDZieE44WG1XYk1ycjdhd1Q0NWFrWTYtLU5lT1pYRTdoZlpNeEd2a29yYV85NHBjcXJuMVdKRzdBa2dvTnRRWTBET245TDBWOUtVbGpEMWUtbHdjODA1WmN0RkVMZ2FRVXdtRWxfTWpiN0F1M0pfV2F2ajN0cmxObzZYSlVTMDM4WlIyVEVr)
+        xcode: latest
+        cocoapods: default
+      triggering:
+        events:
+          - push
+          - tag
+          - pull_request
+        branch_patterns:
+          - pattern: 'develop'
+            include: true
+            source: true
+      scripts:
+      - name: Set up keychain to be used for codesigning using Codemagic CLI 'keychain' command
+        script: |
+          keychain initialize
+      - name: Fetch signing files
+        script: |
+          app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
+      - name: Use system default keychain
+        script: |
+          keychain add-certificates
+      - name: Set up code signing settings on Xcode project
+        script: |
+          xcode-project use-profiles
+      - name: Get Flutter packages
+        script: |
+          cd . && flutter packages pub get
+      - name: Flutter unit tests
+        script: |
+          cd . && flutter test
+        ignore_failure: true          
+      - name: Install pods
+        script: |
+          find . -name "Podfile" -execdir pod install \;
+      - name: Flutter build ipa and automatic versioning
+        script: |
+          flutter build ipa --release \
+          --build-name=1.0.0 \
+          --build-number=$(($(app-store-connect get-latest-testflight-build-number "$APP_STORE_ID") + 1)) \
+          --export-options-plist=/Users/builder/export_options.plist
+      artifacts:
+        - build/ios/ipa/*.ipa
+        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+      publishing:
+        app_store_connect:   # https://docs.codemagic.io/publishing-yaml/distribution              
+          apple_id: mkatteb@badee.com.sa # <-- Put your Apple Id here    
+          password: Encrypted(Z0FBQUFBQmdtU2hSX1pLSG1pajBBZUZEdjEyR0xyaUV3WG1vcmxKcmlYMEhuRXhCMUYyQk9rQ1JPMTNfcDU1NTYwTWZFX1E4UnFRNlNHTVF2SXVQUXdIOV9KclE5WnBXbFgtOEg3a2EyWGxCT2VES3R4THBIajg9)
+        email:
+            recipients:
+              - mustafaezzaldin@outlook.com
+              
+            notify:
+              success: true
+              failure: true
+        slack:
+            channel: '#builds'
+            notify_on_build_start: true    # To receive a notification when a build starts
+            notify:
+              success: false               # To not receive a notification when a build succeeds
+              failure: false 
